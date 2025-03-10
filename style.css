@@ -1,0 +1,89 @@
+/* Reset default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background color */
+body {
+    background-color: #0D0D0D;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+/* Logo on the left */
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFB6C1; /* Pastel Pink */
+}
+
+/* Navbar list on the right */
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+/* Navbar items */
+.navbar ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Navbar links (except Contact Us) */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Default underline for all links except Contact Us */
+.navbar ul li a:not(.contact-btn)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background-color: white; /* Default underline color */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect - change text & underline color */
+.navbar ul li a:not(.contact-btn):hover {
+    color: #FFB6C1; /* Pastel pink */
+}
+
+.navbar ul li a:not(.contact-btn):hover::after {
+    background-color: #FFB6C1; /* Underline turns pastel pink */
+}
+
+/* Contact Us Button */
+.navbar .contact-btn {
+    background-color: #FFB6C1; /* Pastel Pink */
+    color: black;
+    padding: 8px 16px;
+    border-radius: 20px; /* Smooth rounded edges */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none; /* No underline */
+    display: inline-block;
+}
+
+/* Contact Us Button Hover */
+.navbar .contact-btn:hover {
+    background-color: #FF69B4; /* Darker pastel pink */
+    color: white;
+}
