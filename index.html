@@ -2,21 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Picker</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
 <body>
-
+    <!-- Navbar -->
     <div class="navbar">
         <div class="logo">PICKER</div>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
+
             <li><a href="#" class="contact-btn">Contact Us</a></li>
         </ul>
     </div>
 
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Video Section -->
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/businesswoman-working-on-cloud-mining-13171669-11302219.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Description -->
+        <div class="description">
+            <h1>Track Your Time Efficiently</h1>
+            <p>Stay productive by monitoring your social media usage and managing your tasks effectively. Our tool helps you focus on what truly matters.</p>
+        </div>
+    </div>
+    <section class="usage-stats">
+        <h2>Your Usage Statistics</h2>
+        
+        <!-- Chart Type Selector -->
+        <div class="chart-controls">
+            <label for="chartType">Select Chart Type:</label>
+            <select id="chartType">
+                <option value="bar">Bar Chart</option>
+                <option value="line">Line Chart</option>
+                <option value="pie">Pie Chart</option>
+            </select>
+        </div>
+    
+        <!-- Buttons for Weekly/Daily Trends -->
+        <div class="chart-controls">
+            <button id="dailyBtn">Daily Usage</button>
+            <button id="weeklyBtn">Weekly Usage</button>
+        </div>
+    
+        <canvas id="usageChart"></canvas>
+    </section>
+    
+    
 </body>
 </html>

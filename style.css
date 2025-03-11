@@ -9,8 +9,20 @@
 body {
     background-color: #0D0D0D;
     font-family: Arial, sans-serif;
+    color: white;
+}
+ 
+.navbar ul li a:hover {
+    color: #FFB6C1; /* Light pink color on hover */
+    transition: color 0.3s ease;
 }
 
+/* Contact Button Hover Effect */
+.contact-btn:hover {
+    background-color: white;
+    color: #FFB6C1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 /* Navbar styling */
 .navbar {
     background-color: black;
@@ -20,70 +32,117 @@ body {
     padding: 15px 40px;
 }
 
-/* Logo on the left */
+/* Logo */
 .logo {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: bold;
-    color: #FFB6C1; /* Pastel Pink */
+    color: #FFB6C1;
 }
 
-/* Navbar list on the right */
+/* Navbar list */
 .navbar ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 /* Navbar items */
 .navbar ul li {
     margin: 0 15px;
-    position: relative;
 }
 
-/* Navbar links (except Contact Us) */
+/* Navbar links */
 .navbar ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    position: relative;
-    padding: 5px 0;
     transition: color 0.3s ease;
 }
 
-/* Default underline for all links except Contact Us */
-.navbar ul li a:not(.contact-btn)::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 3px;
-    background-color: white; /* Default underline color */
-    transition: background-color 0.3s ease;
-}
-
-/* Hover effect - change text & underline color */
-.navbar ul li a:not(.contact-btn):hover {
-    color: #FFB6C1; /* Pastel pink */
-}
-
-.navbar ul li a:not(.contact-btn):hover::after {
-    background-color: #FFB6C1; /* Underline turns pastel pink */
-}
-
 /* Contact Us Button */
-.navbar .contact-btn {
-    background-color: #FFB6C1; /* Pastel Pink */
+.contact-btn {
+    background-color: #FFB6C1;
     color: black;
     padding: 8px 16px;
-    border-radius: 20px; /* Smooth rounded edges */
+    border-radius: 20px;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-    text-decoration: none; /* No underline */
-    display: inline-block;
+    text-decoration: none;
 }
 
-/* Contact Us Button Hover */
-.navbar .contact-btn:hover {
-    background-color: #FF69B4; /* Darker pastel pink */
-    color: white;
+/* Main Page Layout */
+.main-content {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+/* Video Container */
+.video-container {
+    width: 45%;  /* Adjusts width for balance */
+    max-width: 500px;
+    height: 300px; /* Set a proper rectangular height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container video {
+transition: 1s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures a proper aspect ratio */
+    border-radius: 15px; /* Makes it look better */
+}
+
+/* Description Text */
+.description {
+    width: 45%;
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+/* Usage Stats Section */
+.usage-stats {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1A1A1A;
+}
+
+.usage-stats h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Usage Stats Section */
+.usage-stats {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1A1A1A;
+}
+
+.usage-stats h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Chart Controls */
+.chart-controls {
+    margin-bottom: 15px;
+}
+
+.chart-controls label, .chart-controls select, .chart-controls button {
+    font-size: 16px;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFB6C1;
+    color: black;
+    cursor: pointer;
+}
+
+.chart-controls button:hover {
+    background-color: #ff80a0;
 }
